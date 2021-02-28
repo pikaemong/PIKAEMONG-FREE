@@ -1,0 +1,9 @@
+사이트 열기
+xampp를 설치해준다.
+설치가 완료되었다면 설치된 경로로 들어간다.
+설치 경로를 따라 들어가고서 htdocs를 들어간다.
+htdocs를 들어갔다면 다운받은 pikaemong-website 폴더를 추가해준다.
+추가를 했다면 xampp를 열어 Apache를 Start 버튼을 눌러 시작해준다.
+시작을 했다면 크롬을 실행후 localhost/pikaemong-website/main.php 를 입력해준다.
+본인의 아이피, 호스팅 아이피를 막으려면 도메인을 사용하면 됩니다.
+xampp에서 Apache가 꺼지면 사이트에 연결이 불가능 합니다.(본인 PC를 사용해 24시간 켜두려면 PC를 24시간을 켜두면 됩니다.)
