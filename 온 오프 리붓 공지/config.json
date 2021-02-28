@@ -1,0 +1,10 @@
+{
+ "token": "토큰",
+ "prefix": "!",
+ "CHANNEL": "서버상태 채널id",
+ "servername": "??? 서버",
+ "onstart": "on",
+ "offstart": "off",
+ "rebootstart": "reboot",
+ "directaddress": "connect 다이렉트"
+}
