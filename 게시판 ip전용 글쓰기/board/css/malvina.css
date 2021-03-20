@@ -1,0 +1,343 @@
+/*
+
+  Theme Name: Malvina
+  Theme URI: https://www.sevoan.com
+  Author: sevoan
+  Author URI: https://www.sevoan.com
+  Description: My theme
+  Version: 1.0
+  Text Domain: malvina
+
+*/
+
+@font-face {
+  font-family: Digital;
+  src: url('fonts/digital.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Bender;
+  src: url('fonts/bender.otf');
+  font-weight: normal;
+}
+
+html {
+  background-color: #191919;
+  font-family: "Bender";
+}
+
+blockquote {
+  border-left: 3px solid #F44336;
+}
+
+a {
+  color: #F44336;
+}
+
+nav ul a {
+  font-size: 1.1rem;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.modal, .modal .modal-footer {
+  background-color: rgba(0,0,0,0.9);
+}
+
+.inline {
+  display: flex;
+  align-items: baseline;
+}
+
+.container {
+  width: 95%;
+}
+
+#content {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 2rem 0;
+}
+
+.brand-logo {
+  height: 100%;
+}
+
+.brand-logo img {
+  height: 100%;
+}
+
+li.disabled {
+  color: #616161;
+}
+
+footer.card-action.no-border {
+  border-top: none;
+}
+
+#primary {
+  flex-grow: 1;
+}
+
+.help {
+  color: #9E9E9E;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+nav ul li {
+  transition: none;
+}
+
+ul.dropdown-content li:hover::before {
+  color: #ef5350;
+  width: 2px;
+  content: ' ';
+}
+
+/* RIGHT SIDEBAR */
+
+#secondary {
+  width: 270px;
+  min-width: 270px;
+  margin: 0 0 0 2rem;
+}
+
+.card.panel {
+  margin: 0 0 2rem;
+  border-top: solid 1px #FF5252;
+}
+
+.ugly-top-red-line {
+  margin: 0 0 2rem;
+  border-top: solid 1px #FF5252;
+}
+
+.ugly-top-yellow-line {
+  margin: 0 0 2rem;
+  border-top: solid 1px #ffd600;
+}
+
+.ugly-top-green-line {
+  margin: 0 0 2rem;
+  border-top: solid 1px #64dd17;
+}
+
+.right-sidebar .card-title {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating).no-margin {
+  margin: 0;
+}
+
+.role {
+  text-transform: uppercase;
+}
+
+.role.common {
+  color: #9E9E9E;
+}
+
+.role.vip {
+  color: #FF3D00;
+}
+
+.hwid-timer {
+  font-family: Digital, sans-serif;
+  font-size: 40px;
+}
+
+#hwid_requiem .description {
+  color: #1DE9B6;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.preloader-wrap {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Wordpress */
+
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* POSTS */
+
+article.post {
+  margin: 0 0 2rem;
+}
+
+.post a {
+  color: #FF5252;
+}
+
+.post .info {
+  color: #757575;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+}
+
+#licenses {
+  display: flex;
+  flex-direction: column;
+}
+
+.license {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+
+.license .title {
+  color: #82B1FF;
+}
+
+/* Table */
+
+.col-date {
+  max-width: 100px;
+}
+
+/* Header */
+
+#header_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.header-item {
+  margin-left: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-item:first-child {
+  margin-left: 0;
+}
+
+.header-item .item-name {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-item {
+    margin-left: 1rem;
+  }
+}
+
+/* Sidenav */
+
+.admin-visible {
+  padding-top: 4rem;
+}
+
+.license .status {
+  font-weight: bold;
+}
+
+/* Comments */
+
+.comments-title, .comment-reply-title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#comments .comment-list {
+  padding: 0;
+}
+
+#comments .comment {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-left: 1px #ef5350 solid;
+}
+
+#comments .comment-header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+#comments .comment-header .author-avatar {
+  height: 100%;
+  width: 40px;
+  align-self: center;
+  margin-right: 1rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#comments .comment-header .author-info .name {
+  font-weight: 500;
+}
+
+#comments .comment-header .author-info .date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5)
+}
+
+#comments .comment-footer {
+  margin-top: 1rem;
+}
+
+#comments ol {
+  list-style-type: none;
+}
+
+#cancel-comment-reply-link {
+  color: #ef5350;
+  margin-left: 1rem;
+}
+
+/* FOOTER */
+
+.language-dropdown {
+  display: flex;
+  justify-content: center;
+  /* max-width: 200px; */
+}

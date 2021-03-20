@@ -1,0 +1,86 @@
+<?php
+	require_once("config/dbconfig.php");
+
+	//$_GET['bno']이 있을 때만 $bno 선언
+	if(isset($_GET['bno'])) {
+		$bNo = $_GET['bno'];
+	}
+		 
+	if(isset($bNo)) {
+		$sql = 'select b_title, b_content, b_id from board_free where b_no = ' . $bNo;
+		$result = $db->query($sql);
+		$row = $result->fetch_assoc();
+	}
+?>
+
+<?php
+	$ip = $_SERVER['REMOTE_ADDR']; 
+
+if ($ip != "사용자 ip") { 
+    echo "차단된 IP 입니다."; 
+    return; 
+} else {
+?>
+
+<!DOCTYPE html>
+<html>
+<?php include('main/head.php') ?>
+<div id="scrollbar" class="scrollbar">
+<body class="home-page bp-nouveau home blog wpf-dark wpft- no-js">
+	<div id="content" class="container">
+        <div id="secondary" class="secondary right-sidebar hide-on-med-and-down">
+			
+		</div>
+	<article class="boardArticle">
+		<h3>공지사항 작성</h3>
+		<div id="boardWrite">
+			<form action="./write_update.php" method="post">
+				<?php
+				if(isset($bNo)) {
+					echo '<input type="hidden" name="bno" value="' . $bNo . '">';
+				}
+				?>
+				<table id="boardWrite">
+					<caption class="readHide"></br></caption>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="bID">역할</br>(관리자 입력)</label></th>
+							<td class="id">
+								<?php
+								if(isset($bNo)) {
+									echo $row['b_id'];
+								} else { ?>
+									<input type="text" name="bID" id="bID">
+								<?php } ?>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="bPassword">비밀번호</br>(입력X)</label></th>
+							<td class="password"><input type="password" name="bPassword" id="bPassword"></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="bTitle">제목</label></th>
+							<td class="title"><input type="text" name="bTitle" id="bTitle" value="<?php echo isset($row['b_title'])?$row['b_title']:null?>"></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="bContent">내용</label></th>
+							<td class="content"><textarea name="bContent" id="bContent"><?php echo isset($row['b_content'])?$row['b_content']:null?></textarea></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btnSet">
+					<button type="submit" class="btnSubmit btn">
+						<?php echo isset($bNo)?'수정':'작성'?>
+					</button>
+					<a href="../test.php" class="btnList btn">취소</a>
+				</div>
+			</form>
+		</div>
+	</article>
+	</div>
+</body>
+</div>
+</html>
+<?php
+}
+?>
