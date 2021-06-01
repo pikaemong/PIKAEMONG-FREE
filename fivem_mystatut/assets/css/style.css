@@ -1,0 +1,14 @@
+.checkbox {
+    display: none; 
+  }
+  .title {
+    color: purple;
+    font-weight: bold;
+  }
+  .desc {
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .checkbox:checked + .title + .desc {
+    max-height: 1000px;
+  }
